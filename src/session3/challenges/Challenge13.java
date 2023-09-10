@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Challenge13 {
 
     public static void main(String[] args) {
-        System.out.println("CHALLENGE 2");
+        System.out.println("CHALLENGE 13");
         System.out.println("");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the initial price: ");
