@@ -15,7 +15,7 @@ public class Challenge7 {
         sideThree = scanner.nextInt();
 
         System.out.println("");
-        helpContor = ((sideOne == sideTwo) ? ((sideTwo == sideThree) ? (helpContor = 2) : (helpContor = 1)) : (helpContor = 0));
+        helpContor = (sideOne == sideTwo && sideTwo == sideThree) ? (helpContor = 2) : (sideTwo == sideThree || sideOne == sideTwo || sideOne == sideThree) ? (helpContor = 1) : (helpContor = 0);
 
         switch (helpContor) {
             case 0:
