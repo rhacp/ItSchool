@@ -17,6 +17,6 @@ public class Challenge19 {
         System.out.println("");
 
         helpContor = (a > b && a > c) ? 'a' : (b > a && b > c) ? 'b' : 'c';
-        System.out.println("The biggest number is: "  + helpContor);
+        System.out.println("The biggest number is: " + helpContor);
     }
 }

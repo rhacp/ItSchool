@@ -7,9 +7,9 @@ public class Challenge4 {
     public static void main(String[] args) {
         int heightOne, heightTwo, maximumHeight;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first height:");
+        System.out.print("Enter the first height: ");
         heightOne = scanner.nextInt();
-        System.out.println("Enter the second height:");
+        System.out.print("Enter the second height: ");
         heightTwo = scanner.nextInt();
 
         System.out.println("");

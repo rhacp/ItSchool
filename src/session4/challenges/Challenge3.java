@@ -6,7 +6,7 @@ public class Challenge3 {
 
     public static void main(String[] args) {
         int age;
-        System.out.println("Enter your age:");
+        System.out.print("Enter your age: ");
         Scanner scanner = new Scanner(System.in);
         age = scanner.nextInt();
 

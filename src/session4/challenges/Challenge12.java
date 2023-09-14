@@ -12,6 +12,6 @@ public class Challenge12 {
         negativeNumber = -number;
 
         System.out.println("");
-        System.out.println("The opposite of your number is: " + negativeNumber);
+        System.out.println("The opposite of " + number + " is: " + negativeNumber);
     }
 }
