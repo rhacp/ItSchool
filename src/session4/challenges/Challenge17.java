@@ -18,8 +18,10 @@ public class Challenge17 {
             System.out.println("Authentication successful.");
         } else if (hasUsername == false && hasPassword == false) {
             System.out.println("Authentication failed.");
-        } else {
+        } else if (hasUsername == true && hasPassword == false) {
             System.out.println("Password is incorrect.");
+        } else {
+            System.out.println("Username is incorrect.");
         }
     }
 }
