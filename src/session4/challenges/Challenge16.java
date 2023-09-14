@@ -14,8 +14,14 @@ public class Challenge16 {
         System.out.println("");
 
         variable = -variable;
+        System.out.println("-variable = " + variable);
+        System.out.println("");
+
         //variable = abs(variable);
         variable = -variable;
+        System.out.println("-(-variable) = " + variable);
+        System.out.println("");
+
         variable++;
         System.out.println("-(-value) + 1 = " + variable);
     }
