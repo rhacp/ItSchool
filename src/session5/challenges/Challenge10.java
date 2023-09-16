@@ -21,7 +21,6 @@ public class Challenge10 {
     public static void menuBackEnd() {
         Scanner scanner = new Scanner(System.in);
         String userInput = "";
-        labelOne:
         do {
             System.out.print("Enter one of the menu options: ");
             userInput = scanner.nextLine();
