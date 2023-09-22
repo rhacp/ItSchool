@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Challenge18 {
 
     public static void main(String[] args) {
-        System.out.println("CHALLENGE 17");
+        System.out.println("CHALLENGE 18");
         System.out.println("---");
         System.out.println("");
 
