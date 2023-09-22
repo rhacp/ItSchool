@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Challenge19 {
 
     public static void main(String[] args) {
-        System.out.println("CHALLENGE 18");
+        System.out.println("CHALLENGE 19");
         System.out.println("---");
         System.out.println("");
 
