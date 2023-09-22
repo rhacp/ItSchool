@@ -2,7 +2,7 @@ package session6.challenges;
 
 import java.util.Scanner;
 
-public class Challenge8 {
+public class Challenge08 {
 
     public static void main(String[] args) {
         System.out.println("CHALLENGE 8");

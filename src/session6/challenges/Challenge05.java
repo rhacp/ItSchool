@@ -2,10 +2,9 @@ package session6.challenges;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Challenge5 {
+public class Challenge05 {
 
     public static void main(String[] args) {
         System.out.println("CHALLENGE 4");
