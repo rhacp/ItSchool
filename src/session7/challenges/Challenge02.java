@@ -5,7 +5,7 @@ import java.util.Date;
 public class Challenge02 {
 
     public static void main(String[] args) {
-        System.out.println("CHALLENGE 1");
+        System.out.println("CHALLENGE 2");
         System.out.println("---");
         System.out.println("");
 
