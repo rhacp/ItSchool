@@ -12,6 +12,7 @@ public class Event {
     private LocalDateTime eventDateTime;
     private LocalDateTime reminderDateTime;
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        STILL IN PROGRESS!
 
 //    public Event(String eventName, String eventDescription, String eventDateTime, String reminderDateTime) {
 //        this.eventName = eventName;

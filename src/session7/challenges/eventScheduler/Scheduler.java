@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Scheduler {
-    //In progress
+    //        STILL IN PROGRESS!
     private List<String> events = new ArrayList<>();
 
     public void addEvent(Event e) {
