@@ -1,4 +1,4 @@
-package session7.challenges;
+package session7.challenges.eventScheduler;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

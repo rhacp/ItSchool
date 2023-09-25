@@ -51,13 +51,16 @@ public class Executable {
                     System.out.println("2. Get time until the selected event reminder.");
                     System.out.print("Choose the item by number: ");
                     secondCounter = scanner.nextInt();
+                    System.out.println("");
 
                     switch (secondCounter) {
                         case 1 -> {
                             System.out.println(event1.timeUntilEvent());
+                            System.out.println("");
                         }
                         case 2 -> {
                             System.out.println(event1.timeUntilReminder());
+                            System.out.println("");
                         }
                     }
                 }
