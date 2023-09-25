@@ -54,13 +54,13 @@ public class Challenge12 {
                 rez = firstTime.minusHours(10);
             }
             case "AEST" -> {
-                rez = firstTime.plusHours(8);
+                rez = firstTime.plusHours(7);
             }
             case "EET" -> {
                 rez = firstTime.minusHours(0);
             }
             case "MST" -> {
-                rez = firstTime.minusHours(8);
+                rez = firstTime.minusHours(9);
             }
         }
         return rez.format(formatter);
