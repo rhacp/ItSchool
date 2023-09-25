@@ -14,12 +14,12 @@ public class Event {
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 //        STILL IN PROGRESS!
 
-//    public Event(String eventName, String eventDescription, String eventDateTime, String reminderDateTime) {
-//        this.eventName = eventName;
-//        this.eventDescription = eventDescription;
-//        this.eventDateTime = this.eventDateTime.parse(eventDateTime, formatter);
-//        this.reminderDateTime = this.reminderDateTime.parse(reminderDateTime, formatter);
-//    }
+    public Event(String eventName, String eventDescription, String eventDateTime, String reminderDateTime) {
+        this.eventName = eventName;
+        this.eventDescription = eventDescription;
+        this.eventDateTime = this.eventDateTime.parse(eventDateTime, formatter);
+        this.reminderDateTime = this.reminderDateTime.parse(reminderDateTime, formatter);
+    }
 
     public String getEventName() {
         return eventName;
