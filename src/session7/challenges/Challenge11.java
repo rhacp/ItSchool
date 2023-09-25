@@ -3,8 +3,6 @@ package session7.challenges;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -27,29 +25,32 @@ public class Challenge11 {
         }
         System.out.println("");
         scanner.close();
-
         elapsedTimeSince(time1Value);
     }
 
     public static void elapsedTimeSince(String time1) {
         SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat secondFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date currentTime = new Date();
-        System.out.println(currentTime);
         String help = timeFormat.format(currentTime);
         String secondHelp = help + " " + time1;
-        System.out.println(help);
-        System.out.println(secondHelp);
+//        System.out.println(help);
+//        System.out.println(secondHelp);
         Date firstTime = null;
         try {
-            firstTime = timeFormat.parse(secondHelp);
+            firstTime = secondFormat.parse(secondHelp);
         } catch (ParseException e) {
         }
-        long rez, rezSeconds, rezMinutes, rezHours;
+        long rez;
         rez = currentTime.getTime() - firstTime.getTime();
-        System.out.println(rez);
-        System.out.println("Minutes: " + ((rez / 1000) / 60) % 60);
-        System.out.println("Seconds: " + ((rez / 1000) % 60));
-        System.out.println("Hours: " + ((rez / 1000) / 60) / 60);
+        System.out.println("Input time: " + secondFormat.format(firstTime));
+        System.out.println("Current time: " + secondFormat.format(currentTime));
+        System.out.println("");
+//        System.out.println(rez);
+        System.out.println("Difference: ");
+        System.out.print(((((rez / 1000) / 60) / 60) % 24) + " hours, ");
+        System.out.print((((rez / 1000) / 60) % 60) + " minutes, ");
+        System.out.print(((rez / 1000) % 60) +  " seconds.");
     }
 
     public static boolean isValidTime(String time1) {
