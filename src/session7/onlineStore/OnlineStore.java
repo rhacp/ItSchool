@@ -12,6 +12,6 @@ public class OnlineStore {
         user.setEmail("john@gmail.com");
         user.setCreateAt(LocalDateTime.now());
 
-        System.out.println("User created: " + user.toString());
+        System.out.println("session1.practice.User created: " + user.toString());
     }
 }

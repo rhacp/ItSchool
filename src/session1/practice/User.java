@@ -1,3 +1,5 @@
+package session1.practice;
+
 import java.util.Scanner;
 
 public class User {

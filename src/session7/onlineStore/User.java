@@ -98,7 +98,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "session1.practice.User{" +
                 "firstName='" + firstName + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", userId=" + userId +
