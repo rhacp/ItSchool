@@ -19,6 +19,7 @@ public class Journal {
                     element.setEntryText(element.getEntryText() + entry.getEntryText());
                     entry.setEntryText(null);
                     help = 1;
+//                    break;
                 }
             }
 

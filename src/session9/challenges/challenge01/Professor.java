@@ -1,7 +1,6 @@
 package session9.challenges.challenge01;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Professor {
 
@@ -10,7 +9,6 @@ public class Professor {
     private String sex;
     private int age;
     private LocalDate dateOfBirth;
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private long CNP;
     private String address;
 
