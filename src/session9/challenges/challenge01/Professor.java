@@ -12,13 +12,12 @@ public class Professor {
     private long CNP;
     private String address;
 
-    public Professor(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, DateTimeFormatter formatter, long CNP, String address) {
+    public Professor(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, long CNP, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.sex = sex;
         this.age = age;
         this.dateOfBirth = dateOfBirth;
-        this.formatter = formatter;
         this.CNP = CNP;
         this.address = address;
     }
