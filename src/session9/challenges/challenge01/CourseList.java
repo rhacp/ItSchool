@@ -1,5 +1,6 @@
 package session9.challenges.challenge01;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class CourseList {
@@ -11,8 +12,9 @@ public class CourseList {
     }
 
     public void showAllCourses() {
+        DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         for (Course element : list) {
-            System.out.println(element.getType() + ", start time: " + element.getSchedule() + ", duration: " + element.getDuration());
+            System.out.println(element.getType() + ", start time: " + element.getSchedule().format(formatterTime) + ", duration: " + element.getDuration());
         }
     }
 }

@@ -88,7 +88,9 @@ public class App {
                         System.out.print("The type of course does not exist. Please input it again: ");
                         typeValue = scanner.nextLine();
                     }
-                    list.addCourse(new Course(typeValue, schedule, duration, description, professorList.findProfessorByName(professor)));
+                    if ((professorList.findProfessorByName(professor)) != null) {
+                        list.addCourse(new Course(typeValue, schedule, duration, description, professorList.findProfessorByName(professor)));
+                    }
                 }
                 case 4 -> catalog.showAllStudents();
                 case 5 -> professorList.showAllProfessors();
@@ -96,6 +98,7 @@ public class App {
                 case 0 -> {
                     break MENU_LOOP;
                 }
+                default -> System.out.println("Not valid. Choose again your item.");
             }
         }
     }

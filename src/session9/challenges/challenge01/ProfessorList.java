@@ -2,6 +2,7 @@ package session9.challenges.challenge01;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ProfessorList {
 
@@ -12,23 +13,25 @@ public class ProfessorList {
         if (professorList.size() == 0) {
             professorList.add(professor);
         } else {
-//            int helpCounter = 0;
+            int helpCounter = 0;
             for (Professor element : professorList) {
                 if (element.equals(professor)) {
                     System.out.println("The professor already exist. Please try again.");
-//                    helpCounter = 1;
+                    helpCounter = 1;
                     break;
                 }
             }
 
-            int secondHelp = 0;
-            for (int index = professorList.size() - 1; index >= 0; index--) {
-                if ((professorList.get(index).getFirstName()).compareToIgnoreCase(professor.getFirstName()) < 0) {
-                    secondHelp = index + 1;
-                    break;
+            if (helpCounter == 0) {
+                int secondHelp = 0;
+                for (int index = professorList.size() - 1; index >= 0; index--) {
+                    if ((professorList.get(index).getFirstName()).compareToIgnoreCase(professor.getFirstName()) < 0) {
+                        secondHelp = index + 1;
+                        break;
+                    }
                 }
+                professorList.add(secondHelp, professor);
             }
-            professorList.add(secondHelp, professor);
         }
     }
 
@@ -53,5 +56,18 @@ public class ProfessorList {
             return professorList.get(helpIndex);
         }
         return null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProfessorList that = (ProfessorList) o;
+        return Objects.equals(professorList, that.professorList) && Objects.equals(formatter, that.formatter);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(professorList, formatter);
     }
 }
