@@ -32,9 +32,6 @@ public class App {
             System.out.println("5. Display all professors (alphabetically).");
             System.out.println("6. Display all courses.");
             System.out.println("7. Assign different professor to course.");
-            System.out.println("8. Remove a student.");
-            System.out.println("9. Remove a professor.");
-            System.out.println("10. Remove a course.");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
