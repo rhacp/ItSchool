@@ -1,15 +1,17 @@
 package session9.challenges.challenge01;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
-        menu();
+        Catalog catalog = new Catalog();
+        menu(catalog);
     }
 
-    public static void menu() {
+    public static void menu(Catalog catalog) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         Scanner scanner = new Scanner(System.in);
         int helpCounter;
@@ -30,12 +32,27 @@ public class App {
             System.out.println("");
             System.out.print("Choose the item by number: ");
             helpCounter = Integer.parseInt(scanner.nextLine());
+            System.out.println("");
 
             switch (helpCounter) {
                 case 1 -> {
                     System.out.print("Enter student first name: ");
                     String firstNameValue = scanner.nextLine();
+                    System.out.print("Enter student last name: ");
+                    String lastNameValue = scanner.nextLine();
+                    System.out.print("Enter student gender: ");
+                    String sexValue = scanner.nextLine();
+                    System.out.print("Enter student age: ");
+                    int ageValue = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Enter date of birth (YYYY-MM-DD): ");
+                    LocalDate dateOfBirthValue = LocalDate.parse(scanner.nextLine(), formatter);
+                    System.out.print("Enter student CNP: ");
+                    long cnpValue = Long.parseLong(scanner.nextLine());
+                    System.out.print("Enter student address: ");
+                    String addressValue = scanner.nextLine();
+                    catalog.addStudent(new Student(firstNameValue, lastNameValue, sexValue, ageValue, dateOfBirthValue, cnpValue, addressValue));
                 }
+                case 4 -> catalog.showAllStudents();
                 case 0 -> {
                     break MENU_LOOP;
                 }

@@ -1,7 +1,7 @@
 package session9.challenges.challenge01;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Student {
 
@@ -10,18 +10,16 @@ public class Student {
     private String sex;
     private int age;
     private LocalDate dateOfBirth;
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private long CNP;
+    private long cnp;
     private String address;
 
-    public Student(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, DateTimeFormatter formatter, long CNP, String address) {
+    public Student(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, long cnp, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.sex = sex;
         this.age = age;
         this.dateOfBirth = dateOfBirth;
-        this.formatter = formatter;
-        this.CNP = CNP;
+        this.cnp = cnp;
         this.address = address;
     }
 
@@ -65,20 +63,12 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public DateTimeFormatter getFormatter() {
-        return formatter;
+    public long getCnp() {
+        return cnp;
     }
 
-    public void setFormatter(DateTimeFormatter formatter) {
-        this.formatter = formatter;
-    }
-
-    public long getCNP() {
-        return CNP;
-    }
-
-    public void setCNP(long CNP) {
-        this.CNP = CNP;
+    public void setCnp(long cnp) {
+        this.cnp = cnp;
     }
 
     public String getAddress() {
@@ -97,9 +87,21 @@ public class Student {
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 ", dateOfBirth=" + dateOfBirth +
-                ", formatter=" + formatter +
-                ", CNP=" + CNP +
+                ", CNP=" + cnp +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return getAge() == student.getAge() && getCnp() == student.getCnp() && Objects.equals(getFirstName(), student.getFirstName()) && Objects.equals(getLastName(), student.getLastName()) && Objects.equals(getSex(), student.getSex()) && Objects.equals(getDateOfBirth(), student.getDateOfBirth()) && Objects.equals(getAddress(), student.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFirstName(), getLastName(), getSex(), getAge(), getDateOfBirth(), getCnp(), getAddress());
     }
 }

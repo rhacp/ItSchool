@@ -1,6 +1,7 @@
 package session9.challenges.challenge01;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Professor {
 
@@ -89,5 +90,18 @@ public class Professor {
                 ", CNP=" + CNP +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Professor professor = (Professor) o;
+        return getAge() == professor.getAge() && getCNP() == professor.getCNP() && Objects.equals(getFirstName(), professor.getFirstName()) && Objects.equals(getLastName(), professor.getLastName()) && Objects.equals(getSex(), professor.getSex()) && Objects.equals(getDateOfBirth(), professor.getDateOfBirth()) && Objects.equals(getAddress(), professor.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFirstName(), getLastName(), getSex(), getAge(), getDateOfBirth(), getCNP(), getAddress());
     }
 }
