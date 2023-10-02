@@ -55,6 +55,13 @@ public class App {
                     String addressValue = scanner.nextLine();
                     catalog.addStudent(new Student(firstNameValue, lastNameValue, sexValue, ageValue, dateOfBirthValue, cnpValue, addressValue));
                 }
+                case 3 -> {
+                    System.out.print("Enter the course type (Math, Computer Science, Physics, Chemistry, Biology, Geography, English, and History): ");
+                    String typeValue = scanner.nextLine();
+                    while (typeValue != "Math"&& typeValue != "Computer Science" && typeValue != "Physics" && typeValue != "Chemestry" && typeValue != "Biology" && typeValue != "Geography" && typeValue != "English" && typeValue != "History") {
+
+                    }
+                }
                 case 4 -> catalog.showAllStudents();
                 case 0 -> {
                     break MENU_LOOP;
