@@ -24,12 +24,12 @@ public class Catalog {
             }
 
             int secondHelp = 0;
-//            for (int index = catalog.size() - 1; index >= 0; index--) {
-//                if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
-//                    secondHelp = index + 1;
-//                    break;
-//                }
-//            }
+            for (int index = catalog.size() - 1; index >= 0; index--) {
+                if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
+                    secondHelp = index + 1;
+                    break;
+                }
+            }
 
 //            for (int index = 0; index < catalog.size(); index++) {
 //                if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
@@ -37,14 +37,6 @@ public class Catalog {
 //                    break;
 //                }
 //            }
-//            catalog.add(secondHelp, student);
-
-            for (int index = 0; index < catalog.size(); index++) {
-                if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
-                    secondHelp = index + 1;
-                    break;
-                }
-            }
             catalog.add(secondHelp, student);
         }
     }

@@ -10,16 +10,16 @@ public class Professor {
     private String sex;
     private int age;
     private LocalDate dateOfBirth;
-    private long CNP;
+    private long cnp;
     private String address;
 
-    public Professor(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, long CNP, String address) {
+    public Professor(String firstName, String lastName, String sex, int age, LocalDate dateOfBirth, long cnp, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.sex = sex;
         this.age = age;
         this.dateOfBirth = dateOfBirth;
-        this.CNP = CNP;
+        this.cnp = cnp;
         this.address = address;
     }
 
@@ -63,12 +63,12 @@ public class Professor {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public long getCNP() {
-        return CNP;
+    public long getCnp() {
+        return cnp;
     }
 
-    public void setCNP(long CNP) {
-        this.CNP = CNP;
+    public void setCnp(long cnp) {
+        this.cnp = cnp;
     }
 
     public String getAddress() {
@@ -87,7 +87,7 @@ public class Professor {
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 ", dateOfBirth=" + dateOfBirth +
-                ", CNP=" + CNP +
+                ", CNP=" + cnp +
                 ", address='" + address + '\'' +
                 '}';
     }
@@ -97,11 +97,11 @@ public class Professor {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Professor professor = (Professor) o;
-        return getAge() == professor.getAge() && getCNP() == professor.getCNP() && Objects.equals(getFirstName(), professor.getFirstName()) && Objects.equals(getLastName(), professor.getLastName()) && Objects.equals(getSex(), professor.getSex()) && Objects.equals(getDateOfBirth(), professor.getDateOfBirth()) && Objects.equals(getAddress(), professor.getAddress());
+        return getAge() == professor.getAge() && getCnp() == professor.getCnp() && Objects.equals(getFirstName(), professor.getFirstName()) && Objects.equals(getLastName(), professor.getLastName()) && Objects.equals(getSex(), professor.getSex()) && Objects.equals(getDateOfBirth(), professor.getDateOfBirth()) && Objects.equals(getAddress(), professor.getAddress());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName(), getSex(), getAge(), getDateOfBirth(), getCNP(), getAddress());
+        return Objects.hash(getFirstName(), getLastName(), getSex(), getAge(), getDateOfBirth(), getCnp(), getAddress());
     }
 }
