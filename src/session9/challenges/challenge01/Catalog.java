@@ -42,7 +42,7 @@ public class Catalog {
     }
 
     public void showAllStudents() {
-        for (int index = catalog.size() - 1; index >= 0; index--) {
+        for (int index = 0; index < catalog.size(); index++) {
             System.out.println(catalog.get(index).getFirstName() + " " + catalog.get(index).getLastName());
         }
     }
