@@ -62,14 +62,6 @@ public class Professor {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public DateTimeFormatter getFormatter() {
-        return formatter;
-    }
-
-    public void setFormatter(DateTimeFormatter formatter) {
-        this.formatter = formatter;
-    }
-
     public long getCNP() {
         return CNP;
     }
@@ -94,7 +86,6 @@ public class Professor {
                 ", sex='" + sex + '\'' +
                 ", age=" + age +
                 ", dateOfBirth=" + dateOfBirth +
-                ", formatter=" + formatter +
                 ", CNP=" + CNP +
                 ", address='" + address + '\'' +
                 '}';
