@@ -21,12 +21,17 @@ public class App {
             System.out.println("1. Add a student.");
 //            System.out.println("2. Add a class to a student.");
             System.out.println("2. Add grade for a specific class for a student.");
-            System.out.println("3. See all students and their grades.");
+            System.out.println("3. See all students and their grades (alphabetically).");
             System.out.println("4. See student average.");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
-            helpCounter = Integer.parseInt(scanner.nextLine());
+            String secondHelpCounter = scanner.nextLine();
+            while (!secondHelpCounter.matches("\\d+")) {
+                System.out.print("Invalid input. Try again: ");
+                secondHelpCounter = scanner.nextLine();
+            }
+            helpCounter = Integer.parseInt(secondHelpCounter);
             System.out.println("");
 
             switch (helpCounter) {

@@ -2,7 +2,6 @@ package session9.challenges.challenge03;
 
 import session9.challenges.challenge02.Catalog;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class App {
@@ -25,11 +24,16 @@ public class App {
             System.out.println("2. Withdraw from account.");
             System.out.println("3. Deposit in account.");
             System.out.println("4. Show account summary.");
-            System.out.println("5. See all accounts.");
+            System.out.println("5. See all accounts (alphabetically).");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
-            helpCounter = Integer.parseInt(scanner.nextLine());
+            String secondHelpCounter = scanner.nextLine();
+            while (!secondHelpCounter.matches("\\d+")) {
+                System.out.print("Invalid input. Try again: ");
+                secondHelpCounter = scanner.nextLine();
+            }
+            helpCounter = Integer.parseInt(secondHelpCounter);
             System.out.println("");
 
             switch (helpCounter) {
@@ -66,7 +70,6 @@ public class App {
                 case 0 -> {
                     break MENU_LOOP;
                 }
-                default -> System.out.println("Not valid. Choose again your item.");
             }
         }
     }

@@ -35,7 +35,12 @@ public class App {
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
-            helpCounter = Integer.parseInt(scanner.nextLine());
+            String secondHelpCounter = scanner.nextLine();
+            while (!secondHelpCounter.matches("\\d+")) {
+                System.out.print("Invalid input. Try again: ");
+                secondHelpCounter = scanner.nextLine();
+            }
+            helpCounter = Integer.parseInt(secondHelpCounter);
             System.out.println("");
 
             switch (helpCounter) {
