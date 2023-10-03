@@ -36,7 +36,9 @@ public class Catalog {
 
     public void showAllStudents() {
         for (int index = 0; index < catalog.size(); index++) {
-            System.out.println(catalog.get(index).getName() + " " + catalog.get(index).getName());
+            System.out.println(catalog.get(index).getName() + ", ID: " + catalog.get(index).getUUID());
+            catalog.get(index).getClassesAndGrades();
+            System.out.println("");
         }
     }
 

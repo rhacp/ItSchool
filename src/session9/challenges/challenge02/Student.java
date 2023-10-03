@@ -9,9 +9,9 @@ public class Student {
     private String name;
     private UUID id;
     private ArrayList<String> classes = new ArrayList<>();
-    private ArrayList<Long> grades = new ArrayList<>();
+    private ArrayList<Double> grades = new ArrayList<>();
 
-    public Student (String name) {
+    public Student(String name) {
         this.name = name;
     }
 
@@ -19,12 +19,16 @@ public class Student {
         this.name = name;
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
-    public void setUUID(){
+    public void setUUID() {
         id = UUID.randomUUID();
+    }
+
+    public UUID getUUID() {
+        return id;
     }
 
     public String toString() {
@@ -38,17 +42,20 @@ public class Student {
         classes.add(classToAdd);
     }
 
-    public void addGrade(long grade, String gradeClass) {
-        for (String element : classes) {
-            if (element == gradeClass) {
-                grades.set(classes.indexOf(element), grade);
-            }
+    public void getClassesAndGrades() {
+        for (int index = 0; index < classes.size(); index++) {
+            System.out.println(classes.get(index) + " " + grades.get(index));
         }
     }
 
-    public long averageGrade() {
-        long sum = 0;
-        for (long element : grades) {
+    public void addGrade(double grade, String gradeClass) {
+        classes.add(gradeClass);
+        grades.add(grade);
+    }
+
+    public double averageGrade() {
+        double sum = 0;
+        for (double element : grades) {
             sum += element;
         }
         return (sum / grades.size());

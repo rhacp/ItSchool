@@ -19,9 +19,10 @@ public class App {
             System.out.println("---");
             System.out.println("Choose your item:");
             System.out.println("1. Add a student.");
-            System.out.println("2. Add a class to a student.");
-            System.out.println("3. Add grade for a specific class for a student.");
-            System.out.println("4. See all students and their grades.");
+//            System.out.println("2. Add a class to a student.");
+            System.out.println("2. Add grade for a specific class for a student.");
+            System.out.println("3. See all students and their grades.");
+            System.out.println("4. See student average.");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
@@ -36,12 +37,28 @@ public class App {
                     catalog.getStudent(nameValue).setUUID();
                 }
                 case 2 -> {
-                    System.out.println("Enter student to add class for: ");
+                    System.out.print("Enter student to add class for: ");
                     String nameValue = scanner.nextLine();
-                    System.out.println("Enter class to add: ");
+                    System.out.print("Enter class to add the grade for: ");
                     String classValue = scanner.nextLine();
-                    catalog.getStudent(nameValue).addClass(classValue);
+                    System.out.print("Enter grade: ");
+                    double gradeValue = Double.parseDouble(scanner.nextLine());
+                    if (catalog.getStudent(nameValue) != null) {
+                        catalog.getStudent(nameValue).addGrade(gradeValue, classValue);
+                    }
                 }
+                case 3 -> {
+                    catalog.showAllStudents();
+                }
+                case 4 -> {
+                    System.out.print("Enter student to add class for: ");
+                    String nameValue = scanner.nextLine();
+                    System.out.println("The average between all grades is: " + catalog.getStudent(nameValue).averageGrade());
+                }
+                case 0 -> {
+                    break MENU_LOOP;
+                }
+                default -> System.out.println("Not valid. Choose again your item.");
             }
         }
     }
