@@ -1,7 +1,5 @@
 package session9.challenges.challenge03;
 
-import session9.challenges.challenge02.Student;
-
 import java.util.ArrayList;
 
 public class AccountList {
