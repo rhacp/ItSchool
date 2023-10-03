@@ -1,16 +1,14 @@
-package session9.challenges.challenge01;
+package session9.challenges.challenge02;
 
-import session9.challenges.challenge01.Student;
+import session9.challenges.challenge02.Student;
 
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Catalog {
 
     private ArrayList<Student> catalog = new ArrayList<>();
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    public void addStudent(Student student) {
+    public void addStudent(session9.challenges.challenge02.Student student) {
         if (catalog.size() == 0) {
             catalog.add(student);
         } else {
@@ -26,18 +24,11 @@ public class Catalog {
             if (helpCounter == 0) {
                 int secondHelp = 0;
                 for (int index = catalog.size() - 1; index >= 0; index--) {
-                    if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
+                    if ((catalog.get(index).getName()).compareToIgnoreCase(student.getName()) < 0) {
                         secondHelp = index + 1;
                         break;
                     }
                 }
-
-//            for (int index = 0; index < catalog.size(); index++) {
-//                if ((catalog.get(index).getFirstName()).compareToIgnoreCase(student.getFirstName()) < 0) {
-//                    secondHelp = index;
-//                    break;
-//                }
-//            }
                 catalog.add(secondHelp, student);
             }
         }
@@ -45,7 +36,23 @@ public class Catalog {
 
     public void showAllStudents() {
         for (int index = 0; index < catalog.size(); index++) {
-            System.out.println(catalog.get(index).getFirstName() + " " + catalog.get(index).getLastName());
+            System.out.println(catalog.get(index).getName() + " " + catalog.get(index).getName());
         }
     }
+
+    public Student getStudent(String name){
+        int helpCounter = 0;
+        for (Student element : catalog){
+            if ((element.getName()).equals(name)){
+                helpCounter = 1;
+                return element;
+            }
+        }
+
+        if (helpCounter == 0) {
+            System.out.println("Student does not exist. Try again.");
+        }
+        return null;
+    }
 }
+
