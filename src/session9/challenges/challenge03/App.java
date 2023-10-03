@@ -22,8 +22,8 @@ public class App {
             System.out.println("---");
             System.out.println("Choose your item:");
             System.out.println("1. Create account.");
-            System.out.println("2. Withdraw from account");
-            System.out.println("3. Deposit in account");
+            System.out.println("2. Withdraw from account.");
+            System.out.println("3. Deposit in account.");
             System.out.println("4. Show account summary.");
             System.out.println("5. See all accounts.");
             System.out.println("0. Exit.");
