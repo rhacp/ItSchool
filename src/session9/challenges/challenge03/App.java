@@ -25,6 +25,7 @@ public class App {
             System.out.println("2. Withdraw from account");
             System.out.println("3. Deposit in account");
             System.out.println("4. Show account summary.");
+            System.out.println("5. See all accounts.");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
@@ -58,6 +59,9 @@ public class App {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
                     accountList.getAccount(nameValue).showSummary();
+                }
+                case 5 -> {
+                    accountList.showAllAccounts();
                 }
                 case 0 -> {
                     break MENU_LOOP;

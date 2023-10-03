@@ -47,4 +47,10 @@ public class AccountList {
         }
         return null;
     }
+
+    public void showAllAccounts() {
+        for (int index = 0; index < accountList.size(); index++) {
+            System.out.println(accountList.get(index).getPersonName() + ", ID: " + accountList.get(index).getId() + ", Sum: " + accountList.get(index).getSum());
+        }
+    }
 }
