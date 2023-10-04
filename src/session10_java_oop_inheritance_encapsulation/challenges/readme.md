@@ -28,7 +28,7 @@ Challenges
    ● MountainBike: tireType, suspension<br /><br />
    Methods:<br />
    ● Bicycle: changeGear(), speedUp(), applyBrake()<br />
-   ● MountainBike: adjustSuspension()Challenge<br /><br />
+   ● MountainBike: adjustSuspension()<br /><br />
    Package 2: Multilevel Inheritance<br />
    Domain Model: Cars<br /><br />
    Classes:<br />
