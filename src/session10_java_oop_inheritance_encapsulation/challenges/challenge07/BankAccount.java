@@ -3,6 +3,7 @@ package session10_java_oop_inheritance_encapsulation.challenges.challenge07;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.UUID;
 
 public class BankAccount {
@@ -95,5 +96,18 @@ public class BankAccount {
         } else {
             System.out.println("The sum is not valid.");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankAccount that = (BankAccount) o;
+        return Double.compare(getBalance(), that.getBalance()) == 0 && Objects.equals(getAccountHolderName(), that.getAccountHolderName()) && Objects.equals(getAccountNumber(), that.getAccountNumber()) && Objects.equals(summary, that.summary);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAccountHolderName(), getAccountNumber(), getBalance(), summary);
     }
 }

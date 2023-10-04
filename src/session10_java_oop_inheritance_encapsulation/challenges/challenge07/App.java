@@ -46,7 +46,6 @@ public class App {
                         double sumValue = Double.parseDouble(sumHelp);
                         accountList.addAccount(new BankAccount(nameValue, sumValue));
                         accountList.getAccount(nameValue).setId();
-                        System.out.println("Account created!");
                     } else {
                         System.out.println("Invalid sum. Try again.");
                     }

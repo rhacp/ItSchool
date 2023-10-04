@@ -9,10 +9,11 @@ public class AccountList {
     public void addAccount(BankAccount account) {
         if (accountList.size() == 0) {
             accountList.add(account);
+            System.out.println("Account created!");
         } else {
             int helpCounter = 0;
             for (BankAccount element : accountList) {
-                if (element.equals(account)) {
+                if (element.getAccountHolderName().equals(account.getAccountHolderName())) {
                     System.out.println("This person already has an account. Please try again.");
                     helpCounter = 1;
                     break;
@@ -28,6 +29,7 @@ public class AccountList {
                     }
                 }
                 accountList.add(secondHelp, account);
+                System.out.println("Account created!");
             }
         }
     }
