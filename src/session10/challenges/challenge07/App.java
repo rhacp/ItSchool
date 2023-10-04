@@ -21,10 +21,10 @@ public class App {
             System.out.println("1. Create account.");
             System.out.println("2. Withdraw from account.");
             System.out.println("3. Deposit in account.");
-            System.out.println("4. Show account summary.");
+            System.out.println("4. Show account transactions history.");
             System.out.println("5. See all accounts (alphabetically).");
             System.out.println("6. See account details.");
-            System.out.println("7. Transfer from one account to the other.");
+            System.out.println("7. Transfer from one account to another.");
             System.out.println("0. Exit.");
             System.out.println("");
             System.out.print("Choose the item by number: ");
@@ -41,31 +41,52 @@ public class App {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
                     System.out.print("Enter initial sum: ");
-                    double sumValue = Double.parseDouble(scanner.nextLine());
-                    accountList.addAccount(new BankAccount(nameValue, sumValue));
-                    accountList.getAccount(nameValue).setId();
-                    System.out.println("Account created!");
+                    String sumHelp = scanner.nextLine();
+                    if (sumHelp.matches("\\d+") && (Double.parseDouble(sumHelp) > 0)) {
+                        double sumValue = Double.parseDouble(sumHelp);
+                        accountList.addAccount(new BankAccount(nameValue, sumValue));
+                        accountList.getAccount(nameValue).setId();
+                        System.out.println("Account created!");
+                    } else {
+                        System.out.println("Invalid sum. Try again.");
+                    }
                 }
                 case 2 -> {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
                     System.out.print("Enter sum to withdraw: ");
-                    double sumValue = Double.parseDouble(scanner.nextLine());
-                    accountList.getAccount(nameValue).extractSum(sumValue);
-                    System.out.println("Withdrawal successful!");
+                    String sumHelp = scanner.nextLine();
+                    if (sumHelp.matches("\\d+")) {
+                        if (accountList.getAccount(nameValue) != null) {
+                            double sumValue = Double.parseDouble(sumHelp);
+                            accountList.getAccount(nameValue).extractSum(sumValue);
+                        }
+                    } else {
+                        System.out.println("The sum is not valid. Nothing happened.");
+                    }
                 }
                 case 3 -> {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
                     System.out.print("Enter sum to deposit: ");
-                    double sumValue = Double.parseDouble(scanner.nextLine());
-                    accountList.getAccount(nameValue).addSum(sumValue);
-                    System.out.println("Deposit successful!");
+                    String sumHelp = scanner.nextLine();
+                    if (sumHelp.matches("\\d+")) {
+                        if (accountList.getAccount(nameValue) != null) {
+                            double sumValue = Double.parseDouble(sumHelp);
+                            accountList.getAccount(nameValue).addSum(sumValue);
+                        }
+                    } else {
+                        System.out.println("Sum is not valid. Nothing happened.");
+                    }
                 }
                 case 4 -> {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
-                    accountList.getAccount(nameValue).showSummary();
+                    if (accountList.getAccount(nameValue) != null) {
+                        accountList.getAccount(nameValue).showSummary();
+                    } else {
+                        System.out.println("This person has no account.");
+                    }
                 }
                 case 5 -> {
                     accountList.showAllAccounts();
@@ -73,10 +94,27 @@ public class App {
                 case 6 -> {
                     System.out.print("Enter person name: ");
                     String nameValue = scanner.nextLine();
-                    accountList.getAccount(nameValue).getAccountDetails();
+                    if (accountList.getAccount(nameValue) != null) {
+                        accountList.getAccount(nameValue).getAccountDetails();
+                    } else {
+                        System.out.println("This person has no account.");
+                    }
                 }
                 case 7 -> {
-
+                    System.out.print("Enter the account holder name to transfer from: ");
+                    String nameValue = scanner.nextLine();
+                    System.out.print("Enter the account holder name to transfer to: ");
+                    String targetNameValue = scanner.nextLine();
+                    System.out.print("Enter sum to transfer: ");
+                    String sumHelp = scanner.nextLine();
+                    if (sumHelp.matches("\\d+")) {
+                        if (accountList.getAccount(nameValue) != null && accountList.getAccount(targetNameValue) != null) {
+                            double amountValue = Double.parseDouble(sumHelp);
+                            accountList.transferFunds(nameValue, targetNameValue, amountValue);
+                        }
+                    } else {
+                        System.out.println("Sum is not valid. Nothing happened.");
+                    }
                 }
                 case 0 -> {
                     break MENU_LOOP;

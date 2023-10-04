@@ -52,8 +52,16 @@ public class AccountList {
         }
     }
 
-    public void transferFunds(String accountHolderName, String targetAccountHolderName, double amount){
-
+    public void transferFunds(String accountHolderName, String targetAccountHolderName, double amount) {
+        for (int index = 0; index < accountList.size(); index++) {
+            if ((accountList.get(index).getAccountHolderName()).equals(accountHolderName)) {
+                accountList.get(index).extractSumTransfer(targetAccountHolderName, amount);
+            }
+            if ((accountList.get(index).getAccountHolderName()).equals(targetAccountHolderName)) {
+                accountList.get(index).addSumTransfer(accountHolderName, amount);
+            }
+            }
+        System.out.println("Transfer successful!");
+        }
     }
-}
 

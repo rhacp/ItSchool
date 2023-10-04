@@ -1,7 +1,5 @@
 package session9.challenges.challenge03;
 
-import session9.challenges.challenge02.Catalog;
-
 import java.util.Scanner;
 
 public class App {
