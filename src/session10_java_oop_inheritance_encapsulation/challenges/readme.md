@@ -6,10 +6,8 @@ Challenges<br />
 4. Create a Wolf class that extends Animal, and overrides sound() method, and print “how”. <br />
 5. Create a TestAnimal Class with a main method, create objects with each animal class created (dog, cat, wolf) and call sound()<br />
 <br />
-<br />
-6. Exploring Different Types of Inheritance with the "Vehicles" Domain Model
-   For this exercise, we'll dive into the world of vehicles. Your task is to design three separate packages in Java to
-   demonstrate the three types of inheritance: Single, Multilevel, and Hierarchical.
+6. Exploring Different Types of Inheritance with the "Vehicles" Domain Model<br />
+   For this exercise, we'll dive into the world of vehicles. Your task is to design three separate packages in Java to demonstrate the three types of inheritance: Single, Multilevel, and Hierarchical.<br />
    <br /><br />
    Package 1: Single Inheritance <br />
    Domain Model: Bicycles <br />
