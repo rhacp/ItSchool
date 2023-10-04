@@ -7,5 +7,6 @@ public class MountainBike extends Bicycle{
 
     public void adjustSuspension(String suspension) {
         this.suspension = suspension;
+        System.out.println("The suspension were adjusted as it follows: " + suspension);
     }
 }

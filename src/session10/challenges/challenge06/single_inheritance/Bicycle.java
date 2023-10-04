@@ -12,6 +12,7 @@ public class Bicycle {
     public void speedUp(int amount) {
         if (amount > 0) {
             speed += amount;
+            System.out.println("The speed was increased with: " + amount);
         } else {
             System.out.println("Invalid value.");
         }
@@ -20,6 +21,7 @@ public class Bicycle {
     public void applyBrake(int amount) {
         if (amount > 0 && amount < speed) {
             speed -= amount;
+            System.out.println("The speed was decreased with: " + amount);
         } else {
             System.out.println("Invalid value.");
         }
