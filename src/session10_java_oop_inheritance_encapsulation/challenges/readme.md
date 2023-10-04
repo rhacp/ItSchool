@@ -42,7 +42,7 @@ Challenges
    Methods:<br />
    ● Car: start(), stop(), accelerate()<br />
    ● ElectricCar: charge()<br />
-   ● Tesla: enableAutopilot()Challenge<br /><br />
+   ● Tesla: enableAutopilot()<br /><br />
    Package 3: Hierarchical Inheritance<br />
    Domain Model: Watercraft<br /><br />
    Classes:<br />
