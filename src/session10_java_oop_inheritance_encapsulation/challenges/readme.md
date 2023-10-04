@@ -9,10 +9,9 @@ Challenges
    <br />
 4. Create a Wolf class that extends Animal, and overrides sound() method, and print “how”. <br />
    <br />
-5.  Create a TestAnimal Class with a main method, create objects with each animal class created (dog, cat, wolf) and call sound()<br />
-<br />
----
+5.  Create a TestAnimal Class with a main method, create objects with each animal class created (dog, cat, wolf) and call sound()<br /><br />
 
+---
 <br />
 
 6. Exploring Different Types of Inheritance with the "Vehicles" Domain Model<br />
