@@ -57,7 +57,7 @@ public class BankAccount {
 
     public void extractSum(double sum) {
         DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        if (sum > 0 && sum < balance) {
+        if (sum > 0 && sum <= balance) {
             this.balance -= sum;
             System.out.println("Withdrawal successful!");
             summary.add(String.valueOf(LocalDateTime.now().format(formatterTime)) + " : Withdrawal of " + sum + ".");
@@ -88,7 +88,7 @@ public class BankAccount {
 
     public void extractSumTransfer(String accountHolderName, double sum) {
         DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        if (sum > 0 && sum < balance) {
+        if (sum > 0 && sum <= balance) {
             this.balance -= sum;
             summary.add(String.valueOf(LocalDateTime.now().format(formatterTime)) + " : Transfer of " + sum + " to " + accountHolderName);
             summary.add("Balance: " + Double.toString(this.balance));
