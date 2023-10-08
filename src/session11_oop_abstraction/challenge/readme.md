@@ -35,6 +35,6 @@ Challenge
    ● If smoke or fire detectors are triggered, alert all users and switch on all lights for safety.<br /><br />
    Voice Commands: <br />
    ● Simulate voice commands that users can give to control devices: e.g., "Turn off the living room lights" or "Set thermostat to 22 degrees".<br /><br />
-   Maintenance: 
+   Maintenance: <br />
    ● Devices should have a "health" or "status" associated with them. If a device is malfunctioning or low on battery, an alert should be sent for maintenance.<br />
    ● Schedule routine checks for devices.<br />
