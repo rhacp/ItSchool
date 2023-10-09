@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class App {
 
+    //Still in progress.
     public static void main(String[] args) {
         UserList userlist = new UserList();
         HomeOwner homeOwner = new HomeOwner();
