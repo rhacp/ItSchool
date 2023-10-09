@@ -2,24 +2,22 @@ package session11_oop_abstraction.challenge.challenge07;
 
 import java.util.UUID;
 
-public class User {
+public abstract class User {
 
     protected String name;
     protected UUID userId;
 
-    public String getName() {
-        return name;
-    }
+    protected String Password;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public abstract String getName();
 
-    public UUID getUserId() {
-        return userId;
-    }
+    public abstract void setName(String name);
 
-    public void setUserId() {
-        this.userId = UUID.randomUUID();
-    }
+    public abstract UUID getUserId();
+
+    public abstract void setUserId();
+
+    public abstract String getPassword();
+
+    public abstract void setPassword(String password);
 }
