@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class FamilyMember extends User{
 
+    //No need of implementing an Interface in Subclass if the Superclass has already implemented the interface.
     public String getName() {
         return name;
     }
