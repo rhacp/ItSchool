@@ -92,7 +92,15 @@ public class UserList {
         }
     }
 
-    public void checkOwner(User user) {
+    public void checkIfOwner(User user) {
+
+    }
+
+    public void checkIfFamily(User user) {
+
+    }
+
+    public void checkIfGuest(User user) {
 
     }
 
