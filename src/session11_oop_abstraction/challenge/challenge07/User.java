@@ -2,7 +2,7 @@ package session11_oop_abstraction.challenge.challenge07;
 
 import java.util.UUID;
 
-public abstract class User {
+public abstract class User implements UserID{
 
     protected String name;
     protected UUID userId;
