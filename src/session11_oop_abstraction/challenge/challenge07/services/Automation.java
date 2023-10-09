@@ -1,4 +1,4 @@
-package session11_oop_abstraction.challenge.challenge07;
+package session11_oop_abstraction.challenge.challenge07.services;
 
 public class Automation extends Service{
 

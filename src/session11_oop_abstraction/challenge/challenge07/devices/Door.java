@@ -1,17 +1,16 @@
-package session11_oop_abstraction.challenge.challenge07;
+package session11_oop_abstraction.challenge.challenge07.devices;
 
 import java.util.UUID;
 
-public class Light extends Device{
+public class Door extends Device{
 
     /***
      * @deviceState
      * Boolean:
-     * 1 - lights on
-     * 0 - lights off
+     * 1 - open
+     * 0 - closed
      */
     private boolean deviceState;
-    private byte lightsLevel;
 
     public String getDeviceName() {
         return deviceName;
@@ -51,21 +50,5 @@ public class Light extends Device{
 
     public void setDeviceId() {
         this.deviceId = UUID.randomUUID();
-    }
-
-    public boolean getDeviceState() {
-        return deviceState;
-    }
-
-    public void setDeviceState(boolean deviceState) {
-        this.deviceState = deviceState;
-    }
-
-    public byte getLightsLevel() {
-        return lightsLevel;
-    }
-
-    public void setLightsLevel(byte lightsLevel) {
-        this.lightsLevel = lightsLevel;
     }
 }

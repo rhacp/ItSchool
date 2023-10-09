@@ -1,8 +1,8 @@
-package session11_oop_abstraction.challenge.challenge07;
+package session11_oop_abstraction.challenge.challenge07.user;
 
 import java.util.UUID;
 
-public class FamilyMember extends User{
+public class Guest extends User{
 
     public String getName() {
         return name;

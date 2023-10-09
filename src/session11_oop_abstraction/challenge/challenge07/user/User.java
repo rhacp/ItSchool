@@ -1,4 +1,4 @@
-package session11_oop_abstraction.challenge.challenge07;
+package session11_oop_abstraction.challenge.challenge07.user;
 
 import java.util.UUID;
 

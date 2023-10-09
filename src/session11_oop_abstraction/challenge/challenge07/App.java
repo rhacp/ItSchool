@@ -1,5 +1,8 @@
 package session11_oop_abstraction.challenge.challenge07;
 
+import session11_oop_abstraction.challenge.challenge07.user.HomeOwner;
+import session11_oop_abstraction.challenge.challenge07.user.UserList;
+
 import java.util.Scanner;
 
 public class App {
