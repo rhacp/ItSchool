@@ -92,16 +92,19 @@ public class UserList {
         }
     }
 
-    public void checkIfOwner(User user) {
+    public boolean checkIfOwner(String username, String password) {
 
+        return true;
     }
 
-    public void checkIfFamily(User user) {
+    public boolean checkIfFamily(String username, String password) {
 
+        return true;
     }
 
-    public void checkIfGuest(User user) {
+    public boolean checkIfGuest(String username, String password) {
 
+        return true;
     }
 
 }
