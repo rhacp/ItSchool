@@ -11,5 +11,6 @@ public class TestGameplay {
         knight.setWeapon(new Bow());
 
         knight.attack();
+
     }
 }
