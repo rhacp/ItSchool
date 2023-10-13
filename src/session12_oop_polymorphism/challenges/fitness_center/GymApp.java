@@ -1,31 +1,42 @@
 package session12_oop_polymorphism.challenges.fitness_center;
 
-import session12_oop_polymorphism.challenges.fitness_center.models.FitnessClass;
+import session12_oop_polymorphism.challenges.fitness_center.models.Activity;
+import session12_oop_polymorphism.challenges.fitness_center.models.Item;
 import session12_oop_polymorphism.challenges.fitness_center.models.Member;
 import session12_oop_polymorphism.challenges.fitness_center.models.MembershipTier;
-import session12_oop_polymorphism.challenges.fitness_center.models.PersonalDetails;
+import session12_oop_polymorphism.challenges.fitness_center.service.ItemService;
+import session12_oop_polymorphism.challenges.fitness_center.service.MemberService;
+import session12_oop_polymorphism.challenges.fitness_center.testInterface.*;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
 
-import static session12_oop_polymorphism.challenges.fitness_center.services.BookingServices.checkAvailability;
-import static session12_oop_polymorphism.challenges.fitness_center.services.BookingServices.createBooking;
 
 public class GymApp {
 
     public static void main(String[] args) {
-        PersonalDetails markDetails = new PersonalDetails("Mark", "Blue");
-        PersonalDetails susanDetails = new PersonalDetails("Susan", "White");
+        MemberService gymDB = new MemberService();
+        ItemService itemService = new ItemService();
 
-        Member mark = new Member(UUID.randomUUID(), markDetails, MembershipTier.BASIC);
-        Member susan = new Member(UUID.randomUUID(), susanDetails, MembershipTier.BASIC);
+        Member kenny = gymDB.createMember("Kenny", MembershipTier.BASIC);
+        gymDB.addMember(kenny);
+        gymDB.printAllMembers();
 
-        FitnessClass legDay = new FitnessClass();
-        legDay.setClassName("Leg Day");
-        legDay.setClassDate(LocalDateTime.of(2023, 10, 15, 11, 0));
-        createBooking(legDay, mark);
-        createBooking(legDay, susan);
-        checkAvailability(legDay);
+        Activity fitnessForBoys = new Activity("Gym Bros");
+        gymDB.bookClass(fitnessForBoys, kenny);
+
+        Item frappe = new Item("Frappe", 21.98);
+        itemService.buy(frappe, kenny);
+        itemService.printLogs();
+        System.out.println(kenny.getMembershipTier());
+        gymDB.modifyMembership(kenny, "platinum");
+        System.out.println(kenny.getMembershipTier());
+        gymDB.renewalNotification(kenny);
+
+        // testing here
+        Item2 soda = new Drink();
+        Item2 snack = new Snack();
+        soda.use();
+
+        // kenny.buy()
 
     }
 }

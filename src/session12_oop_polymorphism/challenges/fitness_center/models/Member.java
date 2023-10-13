@@ -1,33 +1,35 @@
 package session12_oop_polymorphism.challenges.fitness_center.models;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class Member {
+public class Member extends User {
 
-    private UUID memberID;
-    private PersonalDetails personalDetails;
     private MembershipTier membershipTier;
+    private LocalDate expirationDate;
+    private double balance;
 
-    public Member(UUID memberID, PersonalDetails personalDetails, MembershipTier membershipTier) {
-        this.memberID = memberID;
-        this.personalDetails = personalDetails;
+    public Member(String name, MembershipTier membershipTier) {
+        super(name);
         this.membershipTier = membershipTier;
+        expirationDate = LocalDate.now().plusMonths(1);
     }
 
-    public UUID getMemberID() {
-        return memberID;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setMemberID(UUID memberID) {
-        this.memberID = memberID;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    public PersonalDetails getPersonalDetails() {
-        return personalDetails;
+    public LocalDate getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setPersonalDetails(PersonalDetails personalDetails) {
-        this.personalDetails = personalDetails;
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     public MembershipTier getMembershipTier() {
@@ -41,9 +43,8 @@ public class Member {
     @Override
     public String toString() {
         return "Member{" +
-                "memberID=" + memberID +
-                ", personalDetails=" + personalDetails +
-                ", membershipTier=" + membershipTier +
+                "membershipTier=" + membershipTier +
+                ", Name=" + getName() +
                 '}';
     }
 }
