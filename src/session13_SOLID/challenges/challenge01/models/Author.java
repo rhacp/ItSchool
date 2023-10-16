@@ -2,6 +2,7 @@ package session13_SOLID.challenges.challenge01.models;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class Author {
 
@@ -41,7 +42,7 @@ public class Author {
     }
 
     public String returnAuthorInformation() {
-        String authorInformation = "Name: " + name + '\n' + "Nationality: " + nationality + '\n' + "Date Of Birth: " + dateOfBirth.format(formatter);
+        String authorInformation = "Name: " + name + ", " + "Nationality: " + nationality + ", " + "Date Of Birth: " + dateOfBirth.format(formatter);
         return authorInformation;
     }
 }

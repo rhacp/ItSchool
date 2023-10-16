@@ -1,25 +1,26 @@
 package session13_SOLID.challenges.challenge01.models;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Random;
 
 public class Book {
 
     private String title;
-    private String author;
+    private Author author;
     private String publisher;
-    private int ISBN;
+    /***
+     * The International Standard Book Number (ISBN) is a 13-digit number that uniquely identifies books and book-like products
+     * published internationally.
+     */
+    private long ISBN;
     private int copies;
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private LocalDate releaseDate;
+    private Random random = new Random();
 
-    public Book(String title, String author, String publisher, int ISBN, int copies, LocalDate releaseDate) {
+    public Book(String title, Author author, String publisher, int copies) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
-        this.ISBN = ISBN;
+        this.ISBN = 1000000000000L + random.nextLong(999999999999L);
         this.copies = copies;
-        this.releaseDate = releaseDate;
     }
 
     public String getTitle() {
@@ -30,11 +31,11 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
@@ -46,12 +47,8 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public int getISBN() {
+    public long getISBN() {
         return ISBN;
-    }
-
-    public void setISBN(int ISBN) {
-        this.ISBN = ISBN;
     }
 
     public int getCopies() {
@@ -62,11 +59,18 @@ public class Book {
         this.copies = copies;
     }
 
-    public LocalDate getReleaseDate() {
-        return releaseDate;
+    public void addCopies(int copiesNumber) {
+        copies += copiesNumber;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
+    public String returnBookInformation() {
+        String bookInformation = "Title: " + title + ", " + "Author: " + author.getName() + ", " + "Publisher: " + publisher + ", " + "ISBN: " + ISBN + ", " + "Copies: " + copies;
+        return bookInformation;
+    }
+
+    public boolean checkBookAvailability() {
+        if (copies > 0) {
+            return true;
+        } else return false;
     }
 }
