@@ -39,6 +39,9 @@ public class Member {
         this.contactInformation = contactInformation;
     }
 
+    /***
+     * Will add the books to the ArrayList alphabetically by title.
+     */
     public void addBorrowedBook(Book book) {
         if (borrowedBooks.size() == 0) {
             borrowedBooks.add(book);
