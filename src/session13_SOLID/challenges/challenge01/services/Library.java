@@ -169,8 +169,7 @@ public class Library {
     }
 
     /***
-     * This method should be in the Library class, not in the Member class,
-     * so we can check if the user still exists in our database (userList variable).
+     * This method should be in the Library class. This way, we can check if the user was not removed from the list.
      */
     public void borrowBook(Book book, Member member, Library library) {
         if (memberList.contains(member)) {
