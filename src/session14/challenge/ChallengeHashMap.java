@@ -218,6 +218,11 @@ public class ChallengeHashMap {
          * Map<String, String> hashMapCopy = new HashMap<>(hashMap);
          * - This will return a shallow copy only if you use custom Objects from custom Classes!!! If they are "primitive"
          * it will return a deep copy actually!!!
+         *
+         * ---
+         *
+         * hashMapCopy.putAll(hashMap);
+         * - This will return a swallow copy of your map.
          */
     }
 
@@ -274,13 +279,18 @@ public class ChallengeHashMap {
          *     STEP 2 - The class should override clone() method of java.lang.Object class.
          *
          * - cannot be used here since we are not using objects from custom classes that can implement the Cloneable
-         * interface or that can overwrite the method
+         * interface or that can overwrite the method.
          *
          * ---
          *
          * Map<String, String> hashMapCopy = new HashMap<>(hashMap);
          * - This will return a shallow copy only if you use custom Objects from custom Classes!!! If they are "primitive"
          * it will return a deep copy actually!!!
+         *
+         * ---
+         *
+         * hashMapCopy.putAll(hashMap);
+         * - This will return a swallow copy of your map.
          *
          *
          * ---
@@ -289,10 +299,7 @@ public class ChallengeHashMap {
          * - Deep Copy of the Map = It actually creates new Objects identical to the ones in the original HashMap, thus
          * creating a new Map identical with our initial one.
          *
-         * ---
-         *
-         * hashMapCopy.putAll(hashMap);
-         * - This will return a deep copy of your map (new object, will not point to the same objects as the original,
+         * - You need to manually do it, no method to create a deep copy directly;
          */
 
         // THIS IS A DEEP COPY AS WE MANUALLY CREATED IT AS A NEW OBJECT
