@@ -1,4 +1,4 @@
-package session14.challenge.hash_map;
+package session14.challenge;
 
 import java.util.*;
 
