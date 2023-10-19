@@ -200,17 +200,24 @@ public class ChallengeHashMap {
          *
          * ---
          *
-         * Map<String, String> hashMapCopy = new HashMap<>(hashMap);
-         * - This will return a shallow copy only if you use custom Objects from custom Classes!!! If they are "primitive"
-         * it will return a deep copy actually!!!
+         * hashMapCopy = hashMap.clone();
+         * - clone() method does the shallow copy. But here the values in the original and cloned hashmap will not affect
+         * each other because primitive data type is used.
+         *
+         * - "clone() has protected access in java.lang.Object" error
+         * - Then the reason why you are getting the above compiler error is that you have not followed either 1 or both of
+         * the basic required steps for cloning an object in Java, which are:
+         *     STEP 1 - The class of the object being cloned should implement java.lang.Cloneable interface.
+         *     STEP 2 - The class should override clone() method of java.lang.Object class.
+         *
+         * - cannot be used here since we are not using objects from custom classes that can implement the Clonable
+         * interface or that can overwrite the method
          *
          * ---
          *
-         * hashMapCopy.putAll(hashMap);
-         * - clone() method does the shallow copy. But here the values in the original and cloned hashmap will not affect
-         * each other because primitive data type is used.
-         * - This will return a deep copy of your map (new object, will not point to the same objects as the original,
-         * will not get changed once you change the original map.
+         * Map<String, String> hashMapCopy = new HashMap<>(hashMap);
+         * - This will return a shallow copy only if you use custom Objects from custom Classes!!! If they are "primitive"
+         * it will return a deep copy actually!!!
          */
     }
 
@@ -247,7 +254,6 @@ public class ChallengeHashMap {
     //  CHALLENGE 03:
     private static Map<String, String> copyMap(Map<String, String> hashMap) {
         Map<String, String> hashMapCopy = new HashMap<>();
-
         /***
          * SHALLOW:
          * - Shallow Copy of Map = It just points to the same Objects as the original map, not actually copying it;
@@ -257,9 +263,18 @@ public class ChallengeHashMap {
          *
          * ---
          *
-         * DEEP:
-         * - Deep Copy of the Map = It actually creates new Objects identical to the ones in the original HashMap, thus
-         * creating a new Map identical with our initial one.
+         * hashMapCopy = hashMap.clone();
+         * - clone() method does the shallow copy. But here the values in the original and cloned hashmap will not affect
+         * each other because primitive data type is used.
+         *
+         * - "clone() has protected access in java.lang.Object" error
+         * - Then the reason why you are getting the above compiler error is that you have not followed either 1 or both of
+         * the basic required steps for cloning an object in Java, which are:
+         *     STEP 1 - The class of the object being cloned should implement java.lang.Cloneable interface.
+         *     STEP 2 - The class should override clone() method of java.lang.Object class.
+         *
+         * - cannot be used here since we are not using objects from custom classes that can implement the Cloneable
+         * interface or that can overwrite the method
          *
          * ---
          *
@@ -267,11 +282,17 @@ public class ChallengeHashMap {
          * - This will return a shallow copy only if you use custom Objects from custom Classes!!! If they are "primitive"
          * it will return a deep copy actually!!!
          *
+         *
+         * ---
+         *
+         * DEEP:
+         * - Deep Copy of the Map = It actually creates new Objects identical to the ones in the original HashMap, thus
+         * creating a new Map identical with our initial one.
+         *
+         * ---
+         *
          * hashMapCopy.putAll(hashMap);
-         * - clone() method does the shallow copy. But here the values in the original and cloned hashmap will not affect
-         * each other because primitive data type is used.
          * - This will return a deep copy of your map (new object, will not point to the same objects as the original,
-         * will not get changed once you change the original map.
          */
 
         // THIS IS A DEEP COPY AS WE MANUALLY CREATED IT AS A NEW OBJECT
