@@ -1,6 +1,8 @@
 package session14.challenge.last_challenge.models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User {
 
@@ -10,6 +12,21 @@ public class User {
 //        listOfLists.add(list);
 //    }
 
+    public void getMostUsedKElements() {
+        Map<Product, Integer> hashMap = new HashMap<>();
+        for (int index = 0; index < listOfLists.size(); index++) {
+            for (int secondIndex = 0; secondIndex < listOfLists.get(index).size(); secondIndex++) {
+                if (hashMap.containsKey(listOfLists.get(index).get(secondIndex))) {
+                    hashMap.put(listOfLists.get(index).get(secondIndex), hashMap.get(listOfLists.get(index).get(secondIndex)) + 1);
+                } else {
+                    hashMap.put(listOfLists.get(index).get(secondIndex), 1);
+                }
+            }
+        }
+        for (Map.Entry<Product, Integer> element : hashMap.entrySet()) {
+            System.out.println("Product " + element.getKey().getName() + ", Number of times purchased: " + element.getValue());
+        }
+    }
 
     public User() {
         System.out.println("The user was created.");
@@ -17,7 +34,7 @@ public class User {
 
     public void createShoppingCartAtIndex(int index) {
         if (listOfLists.size() - 1 <= index) {
-                listOfLists.add(index, new ArrayList<Product>());
+            listOfLists.add(index, new ArrayList<Product>());
         }
         System.out.println("Shopping cart created at index " + index + ".");
     }

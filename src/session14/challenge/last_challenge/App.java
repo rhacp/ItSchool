@@ -40,16 +40,25 @@ public class App {
         user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Butter"), 0);
         user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Biscuits"), 0);
         user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 0);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 0);
         System.out.println("");
 
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Mouse"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Speaker"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Webcam"), 0);
-        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Webcam"), 0);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("TV"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Mouse"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Speaker"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("WebCam"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("WebCam"), 1);
+        user.addProductToShoppingCartWithSpecificIndex(productService.getProductByName("Biscuits"), 1);
+        System.out.println("");
 
         user.printShoppingCartWithSpecificIndex(0);
+        System.out.println("");
+        user.printShoppingCartWithSpecificIndex(1);
+        System.out.println("");
+
+        user.getMostUsedKElements();
     }
 }
