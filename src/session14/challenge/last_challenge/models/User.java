@@ -1,16 +1,14 @@
 package session14.challenge.last_challenge.models;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class User {
 
     private ArrayList<ArrayList<Product>> listOfLists = new ArrayList<>();
 
-//    public void addShoppingList(ArrayList<Product> list) {
-//        listOfLists.add(list);
-//    }
+    public void addShoppingList(ArrayList<Product> list) {
+        listOfLists.add(list);
+    }
 
     public void getMostUsedKElements() {
         Map<Product, Integer> hashMap = new HashMap<>();
@@ -23,7 +21,11 @@ public class User {
                 }
             }
         }
-        for (Map.Entry<Product, Integer> element : hashMap.entrySet()) {
+
+        List<Map.Entry<Product, Integer>> result = new ArrayList<>(hashMap.entrySet());
+        result.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+
+        for (Map.Entry<Product, Integer> element : result) {
             System.out.println("Product " + element.getKey().getName() + ", Number of times purchased: " + element.getValue());
         }
     }
