@@ -1,5 +1,7 @@
 package session14_collections.challenge.last_challenge.models;
 
+import java.util.Objects;
+
 public class Product {
 
     private String name;
@@ -31,5 +33,18 @@ public class Product {
                 "name='" + name + '\'' +
                 ", id='" + id + '\'' +
                 ']';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(getName(), product.getName()) && Objects.equals(getId(), product.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getId());
     }
 }
