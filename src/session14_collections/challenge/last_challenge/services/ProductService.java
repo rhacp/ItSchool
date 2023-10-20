@@ -1,6 +1,6 @@
-package session14.challenge.last_challenge.services;
+package session14_collections.challenge.last_challenge.services;
 
-import session14.challenge.last_challenge.models.Product;
+import session14_collections.challenge.last_challenge.models.Product;
 
 import java.util.ArrayList;
 import java.util.Random;

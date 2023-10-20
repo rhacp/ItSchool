@@ -1,4 +1,4 @@
-package session14.challenge.last_challenge.models;
+package session14_collections.challenge.last_challenge.models;
 
 import java.util.*;
 

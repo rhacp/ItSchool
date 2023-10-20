@@ -1,4 +1,4 @@
-package session14.challenge;
+package session14_collections.challenge;
 
 import java.util.*;
 

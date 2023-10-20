@@ -1,7 +1,7 @@
-package session14.challenge.last_challenge;
+package session14_collections.challenge.last_challenge;
 
-import session14.challenge.last_challenge.models.User;
-import session14.challenge.last_challenge.services.ProductService;
+import session14_collections.challenge.last_challenge.models.User;
+import session14_collections.challenge.last_challenge.services.ProductService;
 
 public class App {
 

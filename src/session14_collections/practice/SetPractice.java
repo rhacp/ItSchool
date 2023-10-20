@@ -1,4 +1,4 @@
-package session14.practice;
+package session14_collections.practice;
 
 import java.util.HashSet;
 import java.util.Set;
