@@ -1,7 +1,6 @@
 package session15_equals_hashcode_generics_enums.challenge.challenge08;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class App {
 
@@ -33,22 +32,22 @@ public class App {
         ArrayList<RunningAppAction> cacheApps = new ArrayList<>();
 
         System.out.println("Add first RunningAppAction to cache:");
-        addAppToCache(firstApp, cacheApps);
+        addAppActionToCacheRunningAppList(firstApp, cacheApps);
         System.out.println("");
 
         System.out.println("Add second RunningAppAction to cache:");
-        addAppToCache(secondApp, cacheApps);
+        addAppActionToCacheRunningAppList(secondApp, cacheApps);
         System.out.println("");
 
         System.out.println("Add third RunningAppAction to cache:");
-        addAppToCache(thirdApp, cacheApps);
+        addAppActionToCacheRunningAppList(thirdApp, cacheApps);
         System.out.println("");
 
         System.out.println("Current apps stored as running in the cached:");
         System.out.println(cacheApps);
     }
 
-    private static void addAppToCache(RunningAppAction app, ArrayList<RunningAppAction> cache) {
+    private static void addAppActionToCacheRunningAppList(RunningAppAction app, ArrayList<RunningAppAction> cache) {
         int help = 0;
         for (RunningAppAction element : cache) {
             if (app.hashCode() == element.hashCode()) {
