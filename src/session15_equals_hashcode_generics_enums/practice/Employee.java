@@ -1,4 +1,4 @@
-package session15.practice;
+package session15_equals_hashcode_generics_enums.practice;
 
 import java.util.Objects;
 

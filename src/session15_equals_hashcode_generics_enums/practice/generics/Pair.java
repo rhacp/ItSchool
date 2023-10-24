@@ -1,4 +1,4 @@
-package session15.practice.generics;
+package session15_equals_hashcode_generics_enums.practice.generics;
 
 public class Pair <K, V> {
 

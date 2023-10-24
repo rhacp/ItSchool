@@ -1,4 +1,4 @@
-package session15.practice.enums;
+package session15_equals_hashcode_generics_enums.practice.enums;
 
 public enum Day {
 
