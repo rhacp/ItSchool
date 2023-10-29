@@ -24,9 +24,10 @@
    to the World of Java");)<br /><br />
 10. Using streams, find the total number of characters across a list of strings excluding whitespace characters. (Input:
     List<String> strings = Arrays.asList("Java Streams", "Method References", "Lambda Expressions");)<br /><br />
-11. Create a stream from a text file and use stream operations to find and print the longest word in the file. 12. Given
-    a list of employee objects with attributes: name, department, and salary; find the department with the highest total
-    salary. 13. Using a stream of strings representing numbers (e.g., "1", "2", "3"), convert them to integers and find
+11. Create a stream from a text file and use stream operations to find and print the longest word in the file. <br /><br />
+12. Given a list of employee objects with attributes: name, department, and salary; find the department with the highest total
+    salary. <br /><br />
+13. Using a stream of strings representing numbers (e.g., "1", "2", "3"), convert them to integers and find
     the product of all numbers using reduce. (Input: List<String> numbers = Arrays.asList("1", "2", "3", "4", "5");)<br /><br />
 14. Given a list of products with attributes: name, category, and price; find the category with the highest average
     price.<br /><br />
