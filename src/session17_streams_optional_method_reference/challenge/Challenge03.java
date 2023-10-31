@@ -2,15 +2,26 @@ package session17_streams_optional_method_reference.challenge;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Challenge03 {
 
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
+        List<Integer> numbersTwo = new ArrayList<>();
         for (int index = 1; index < 101; index++) {
             numbers.add(index);
         }
+
         printPrimeNumbers(numbers);
+        System.out.println(primeNumberInRange(0, 100));
+    }
+
+    private static List<Integer> primeNumberInRange(int min, int max) {
+        return IntStream.rangeClosed(min, max)
+                .filter(number -> checkPrime(number))
+                .boxed()
+                .toList();
     }
 
     private static void printPrimeNumbers(List<Integer> integerList) {

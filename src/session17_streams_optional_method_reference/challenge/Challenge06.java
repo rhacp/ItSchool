@@ -13,6 +13,12 @@ public class Challenge06 {
     private static void integerSum(List<Integer> integerList) {
         int result = integerList.stream()
                 .reduce(0, (firstNumber, secondNumber) -> firstNumber + secondNumber);
+
+        int reuslt2 = integerList.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+
         System.out.println("Sum: " + result);
+        System.out.println(reuslt2);
     }
 }
