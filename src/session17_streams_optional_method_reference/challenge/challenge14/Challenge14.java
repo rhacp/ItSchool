@@ -17,19 +17,18 @@ public class Challenge14 {
     }
 
     private static void printCategoryWithHighestAveragePrice(List<Product> productList) {
-        int help = 1;
-        Optional<Map.Entry<String, String>> result = productList.stream()
-                .collect(Collectors.toMap(
-                        element -> element.getCategory(),
-                        element -> String.valueOf(element.getPrice()),
-                        (element1, element2) -> (String.valueOf(element1) + " " + String.valueOf(element2))
-                ))
-                .entrySet().stream()
-                .flatMap(str -> Arrays.stream(str.getValue().split(" ")))
-                .toList().stream()
-                .map(element -> Integer.valueOf(element))
-                .mapToInt(Integer::intValue)
-                .average()
-        System.out.println("The Category with the highest average price is: " + result.get().getValue());
+//        Optional<Map.Entry<String, String>> result = productList.stream()
+//                .collect(Collectors.toMap(
+//                        element -> element.getCategory(),
+//                        element -> String.valueOf(element.getPrice()),
+//                        (element1, element2) -> (String.valueOf(element1) + " " + String.valueOf(element2))
+//                ))
+//                .entrySet().stream()
+//                .flatMap(str -> Arrays.stream(str.getValue().split(" ")))
+//                .toList().stream()
+//                .map(element -> Integer.valueOf(element))
+//                .mapToInt(Integer::intValue)
+//                .average();
+//        System.out.println("The Category with the highest average price is: " + result.get().getValue());
     }
 }
