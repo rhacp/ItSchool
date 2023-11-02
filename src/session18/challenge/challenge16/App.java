@@ -1,6 +1,6 @@
-package session18.chellenge.challenge16;
+package session18.challenge.challenge16;
 
-import session18.chellenge.challenge16.models.ClassPair;
+import session18.challenge.challenge16.models.ClassPair;
 
 public class App {
 

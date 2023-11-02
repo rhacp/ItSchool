@@ -1,6 +1,6 @@
-package session18.chellenge.challenge20;
+package session18.challenge.challenge20;
 
-import session18.chellenge.challenge20.models.ListWrapper;
+import session18.challenge.challenge20.models.ListWrapper;
 
 public class App {
 

@@ -1,4 +1,4 @@
-package session18.chellenge.challenge12;
+package session18.challenge.challenge12;
 
 import java.util.Arrays;
 import java.util.Comparator;

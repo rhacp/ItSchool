@@ -3,9 +3,9 @@
 
 //To do: finish this mf -> add to list and sort !!!!
 
-package session18.chellenge.challenge08;
+package session18.challenge.challenge08;
 
-import session18.chellenge.challenge08.models.Event;
+import session18.challenge.challenge08.models.Event;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

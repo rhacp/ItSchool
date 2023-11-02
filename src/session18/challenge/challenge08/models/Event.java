@@ -1,4 +1,4 @@
-package session18.chellenge.challenge08.models;
+package session18.challenge.challenge08.models;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

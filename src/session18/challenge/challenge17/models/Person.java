@@ -1,4 +1,4 @@
-package session18.chellenge.challenge17.models;
+package session18.challenge.challenge17.models;
 
 public class Person {
 

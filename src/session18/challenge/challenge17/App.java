@@ -1,8 +1,7 @@
-package session18.chellenge.challenge17;
+package session18.challenge.challenge17;
 
-import session18.chellenge.challenge17.models.Person;
+import session18.challenge.challenge17.models.Person;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
