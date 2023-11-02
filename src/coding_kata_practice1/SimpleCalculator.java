@@ -1,4 +1,4 @@
-package codingKataPractice1;
+package coding_kata_practice1;
 
 import java.util.Scanner;
 

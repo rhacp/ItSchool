@@ -1,4 +1,4 @@
-package codingKataPractice2;
+package coding_kata_practice2;
 
 import java.time.LocalDateTime;
 
