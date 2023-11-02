@@ -1,4 +1,4 @@
-package session18.chellenge.challenge16;
+package session18.chellenge.challenge16.models;
 
 public class ClassPair <T, U> {
 

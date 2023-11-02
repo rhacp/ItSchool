@@ -1,5 +1,7 @@
 package session18.chellenge.challenge20;
 
+import session18.chellenge.challenge20.models.ListWrapper;
+
 public class App {
 
     public static void main(String[] args) {

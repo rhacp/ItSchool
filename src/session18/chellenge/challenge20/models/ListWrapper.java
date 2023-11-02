@@ -1,4 +1,4 @@
-package session18.chellenge.challenge20;
+package session18.chellenge.challenge20.models;
 
 import java.util.ArrayList;
 import java.util.List;
