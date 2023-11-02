@@ -34,7 +34,8 @@ Design a Movie class with attributes like title, genre, and a list of ratings. U
 
 ### Problem 15
 For a list of integers, filter out even numbers, then find the product of all remaining odd numbers using the reduce operation.
-Problem 16
+
+### Problem 16
 Design a generic class Pair<T, U> that can hold two items of potentially different types. Implement methods to retrieve each item.
 
 ### Problem 17

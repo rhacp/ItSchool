@@ -6,21 +6,23 @@
 package coding_kata_practice3;
 
 import coding_kata_practice3.models.Event;
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class DateEventApp {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        List<Event> eventList = new ArrayList<>();
 
         Menu_LOOP:
         while (true) {
             showOptions();
             String option = scanner.nextLine();
             switch (option) {
-                case "1" -> addEvent(scanner);
-                case "2" -> viewEvent();
+                case "1" -> addEvent(scanner, eventList);
+                case "2" -> viewEvents(eventList);
                 case "0" -> {
                     break Menu_LOOP;
                 }
@@ -30,7 +32,7 @@ public class DateEventApp {
 
     }
 
-    private static void addEvent(Scanner scanner) {
+    private static void addEvent(Scanner scanner, List<Event> eventList) {
         System.out.println("Enter a date: ");
         String date = scanner.nextLine();
         System.out.println("Enter description: ");
@@ -43,13 +45,31 @@ public class DateEventApp {
         System.out.println(event);
         System.out.println("Event successfully created.");
         System.out.println(" ");
+
+        int help = 0;
+        if (eventList.isEmpty()) {
+            eventList.add(event);
+        } else {
+            for (int index = eventList.size() - 1; index >= 0; index--) {
+                if (eventList.get(index).getEventDate().isBefore(event.getEventDate())) {
+                    help = index + 1;
+                    break;
+                }
+            }
+            eventList.add(help, event);
+        }
     }
 
-    private static void viewEvent() {
+    private static void viewEvents(List<Event> eventList) {
         System.out.println("List of events: ");
+        for (Event element : eventList) {
+            System.out.println(element);
+        }
+        System.out.println(" ");
     }
 
     private static void showOptions() {
+        System.out.println("MENU");
         System.out.println("1. Add event type");
         System.out.println("2. View events");
         System.out.println("0. Exit");
