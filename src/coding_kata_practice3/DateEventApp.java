@@ -41,6 +41,8 @@ public class DateEventApp {
         event.setEventDate(date);
         event.setDescription(description);
         System.out.println(event);
+        System.out.println("Event successfully created.");
+        System.out.println(" ");
     }
 
     private static void viewEvent() {
